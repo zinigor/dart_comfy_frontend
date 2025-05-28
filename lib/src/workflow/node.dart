@@ -35,9 +35,6 @@ class WorkflowNode {
   );
 
   factory WorkflowNode.fromJSON(Map<String, dynamic> json) {
-    int x;
-    int y;
-
     final id = json['id'] as int;
     final type = json['type'] as String;
     final pos = json['pos'].map<double>((item) => item as double).toList();
