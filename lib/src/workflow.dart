@@ -39,7 +39,7 @@ class Workflow{
 
   List<dynamic> get groups {
     if (_json case {'groups': List<dynamic> links}) {
-      return groups;
+      return links;
     } else {
       throw const FormatException('Unexpected JSON');
     }
