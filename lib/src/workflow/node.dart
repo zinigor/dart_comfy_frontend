@@ -14,7 +14,7 @@ class WorkflowNode {
   final Map properties;
   final String? color = null;
   final String? bgcolor = null;
-  final List<dynamic>? widgets_values = [];
+  final List<dynamic>? widgetsValues = [];
 
   WorkflowNode(
       this.id,
@@ -30,7 +30,7 @@ class WorkflowNode {
       {
         String? color,
         String? bgcolor,
-        List<dynamic>? widgets_values
+        List<dynamic>? widgetsValues
       }
   );
 
@@ -47,7 +47,7 @@ class WorkflowNode {
     final properties = json['properties'] as Map;
     final color = json['color'] as String?;
     final bgcolor = json['bgcolor'] as String?;
-    final widgets_values = json['widgets_values'] as List<dynamic>?;
+    final widgetsValues = json['widgets_values'] as List<dynamic>?;
 
     return WorkflowNode(
       id,
@@ -62,7 +62,7 @@ class WorkflowNode {
       properties,
       color: color,
       bgcolor: bgcolor,
-      widgets_values: widgets_values
+      widgetsValues: widgetsValues
     );
   }
 }
