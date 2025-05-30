@@ -21,15 +21,15 @@ class Workflow{
     this.version
   );
 
-  factory Workflow.fromJSON( Map<String, dynamic> _json) {
-    final lastNodeId = _json['last_node_id'] as int;
-    final lastLinkId = _json['last_link_id'] as int;
-    final nodes = _json['nodes'].map<WorkflowNode>((node) => WorkflowNode.fromJSON(node)).toList();
-    final links = _json['links'].map((prop) => prop is String ? prop as int : prop as String).toSet();
-    final groups = _json['groups'].map((group) => group as Map<String, dynamic>).toList() as List<dynamic>;
-    final config = _json['config'] as Map;
-    final extra = _json['extra'] as Map<String, dynamic>;
-    final version = "${_json['version']}";
+  factory Workflow.fromJSON( Map<String, dynamic> json) {
+    final lastNodeId = json['last_node_id'] as int;
+    final lastLinkId = json['last_link_id'] as int;
+    final nodes = json['nodes'].map<WorkflowNode>((node) => WorkflowNode.fromJSON(node)).toList();
+    final links = json['links'].map((prop) => prop is String ? prop as int : prop as String).toSet();
+    final groups = json['groups'].map((group) => group as Map<String, dynamic>).toList() as List<dynamic>;
+    final config = json['config'] as Map;
+    final extra = json['extra'] as Map<String, dynamic>;
+    final version = "${json['version']}";
 
     return Workflow(
       lastNodeId,
