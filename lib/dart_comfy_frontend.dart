@@ -9,3 +9,4 @@ export 'src/workflow/input.dart' show WorkflowInput;
 export 'src/workflow/output.dart' show WorkflowOutput;
 export 'src/workflow/model.dart' show WorkflowModel;
 export 'src/workflow/view.dart' show WorkflowView;
+export 'src/workflow/view/node.dart' show WorkflowViewNode;

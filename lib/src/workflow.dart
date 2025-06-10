@@ -42,4 +42,14 @@ class Workflow{
       version
     );
   }
+
+  Workflow.fromEmpty() :
+    lastNodeId = 0,
+    lastLinkId = 0,
+    nodes = <WorkflowNode>[],
+    links = <dynamic>{},
+    groups = <dynamic>[],
+    config = {},
+    extra = {},
+    version = '0.0.1';
 }

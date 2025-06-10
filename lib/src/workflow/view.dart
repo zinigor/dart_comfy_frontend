@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import '../workflow/model.dart';
+import 'model.dart';
+import 'view/node.dart';
 
 class WorkflowView extends StatelessWidget {
 
@@ -12,7 +13,7 @@ class WorkflowView extends StatelessWidget {
     return Column(
       children: [
         Stack(
-          children: workflow.nodes.map<Text>((item) => Text(item.type)).toList()
+          children: workflow.nodes.map<WorkflowViewNode>((item) => WorkflowViewNode(item)).toList()
         ),
         TextButton(
           onPressed: () => workflow.loadExample(),
